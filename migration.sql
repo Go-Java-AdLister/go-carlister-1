@@ -16,6 +16,10 @@ CREATE TABLE ads (
     user_id INT UNSIGNED NOT NULL,
     title VARCHAR(240) NOT NULL,
     description TEXT NOT NULL,
+    year VARCHAR(50) NOT NULL,
+    make VARCHAR(50)  NOT NULL,
+    color VARCHAR(50) NOT NULL,
+    model VARCHAR(50) NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users(id)
         ON DELETE CASCADE
