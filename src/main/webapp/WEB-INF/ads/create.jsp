@@ -17,6 +17,22 @@
                 <label for="description">Description</label>
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
+            <div class="form-group">
+                <label for="year">Year</label>
+                <textarea id="year" name="year" class="form-control" type="text"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="make">Make</label>
+                <textarea id="make" name="make" class="form-control" type="text"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="color">Color</label>
+                <textarea id="color" name="color" class="form-control" type="text"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="model">Model</label>
+                <textarea id="model" name="model" class="form-control" type="text"></textarea>
+            </div>
             <input type="submit" class="btn btn-block btn-primary">
         </form>
     </div>

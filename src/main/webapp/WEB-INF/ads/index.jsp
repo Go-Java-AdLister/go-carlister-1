@@ -16,6 +16,10 @@
         <div class="col-md-6">
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
+            <p>${ad.year}</p>
+            <p>${ad.make}</p>
+            <p>${ad.color}</p>
+            <p>${ad.model}</p>
         </div>
     </c:forEach>
 </div>
