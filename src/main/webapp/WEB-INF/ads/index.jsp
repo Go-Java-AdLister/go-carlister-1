@@ -3,26 +3,22 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Viewing All The Ads" />
+        <jsp:param name="title" value="Welcome to my site!"/>
     </jsp:include>
 </head>
 <body>
-<jsp:include page="/WEB-INF/partials/navbar.jsp" />
-
+<jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <div class="container">
-    <h1>Here Are all the ads!</h1>
+    <h2>Here is a list of all the Cars!</h2>
 
-    <c:forEach var="ad" items="${ads}">
+    <c:forEach var="ads" items="${ads}">
         <div class="col-md-6">
-            <h2>${ad.title}</h2>
-            <p>${ad.description}</p>
-            <p>${ad.year}</p>
-            <p>${ad.make}</p>
-            <p>${ad.color}</p>
-            <p>${ad.model}</p>
+            <h3>${ads.title}</h3>
+            <p>${ads.description}</p>
+            <a href="/WEB-INF/ads/details.jsp">Link to Full Ad</a>
+
         </div>
     </c:forEach>
 </div>
-
 </body>
 </html>
