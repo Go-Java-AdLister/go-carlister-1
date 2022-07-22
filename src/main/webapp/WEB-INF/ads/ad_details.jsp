@@ -13,12 +13,12 @@
 
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
-            <h3>${ads.title}</h3>
-            <p>${ads.year}</p>
-            <p>${ads.make}</p>
-            <p>${ads.model}</p>
-            <p>${ads.color}</p>
-            <p>${ads.description}</p>
+            <h3>${ad.title}</h3>
+            <p>${ad.year}</p>
+            <p>${ad.make}</p>
+            <p>${ad.model}</p>
+            <p>${ad.color}</p>
+            <p>${ad.description}</p>
 
 
         </div>
