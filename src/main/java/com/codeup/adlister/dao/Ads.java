@@ -8,5 +8,7 @@ public interface Ads {
     // get a list of all the ads
     List<Ad> all();
     // insert a new ad and return the new ad's id
+
+    Ad getAdById(long id);
     Long insert(Ad ad);
 }

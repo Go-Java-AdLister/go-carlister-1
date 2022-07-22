@@ -5,30 +5,16 @@ public class Ad {
     private long userId;
     private String title;
     private String description;
-
     private String year;
-
     private String make;
-
     private String color;
-
     private String model;
 
-    public Ad(long id, long userId, String title, String description, String year, String make, String color, String model) {
-
-        this.id = id;
-        this.userId = userId;
-        this.title = title;
-        this.description = description;
-        this.year = year;
-        this.make = make;
-        this.color = color;
-        this.model = model;
-
-
+    public Ad() {
     }
 
-    public Ad(long userId, String title, String description, String year, String make, String color, String model) {
+    public Ad(long id, long userId, String title, String description, String year, String make, String color, String model) {
+        this.id = id;
         this.userId = userId;
         this.title = title;
         this.description = description;
@@ -66,39 +52,39 @@ public class Ad {
         return description;
     }
 
-    public String getYear(){ return year; }
-
-    public String getMake(){ return make; }
-
-    public String getColor(){ return color; }
-
-    public String getModel(){ return model; }
-
-
-
-//
-//
-//
-//
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getYear() {
+        return year;
     }
 
     public void setYear(String year) {
         this.year = year;
     }
 
+    public String getMake() {
+        return make;
+    }
+
     public void setMake(String make) {
         this.make = make;
+    }
+
+    public String getColor() {
+        return color;
     }
 
     public void setColor(String color) {
         this.color = color;
     }
 
-    public void setModel(String mode) {
-        this.model = mode;
+    public String getModel() {
+        return model;
     }
 
+    public void setModel(String model) {
+        this.model = model;
+    }
 }
-
