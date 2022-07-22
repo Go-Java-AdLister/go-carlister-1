@@ -11,11 +11,10 @@
 <div class="container">
     <h2>Here is a list of all the Cars!</h2>
 
-    <c:forEach var="ads" items="${ads}">
+    <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
             <h3>${ads.title}</h3>
-            <p>${ads.description}</p>
-            <a href="/WEB-INF/ads/details.jsp">Link to Full Ad</a>
+            <a> href="<c:url value="/details"><c:param name="id" value="${ad.id}"/><"Link to Full Ad"></c:url>"</a>
 
         </div>
     </c:forEach>
