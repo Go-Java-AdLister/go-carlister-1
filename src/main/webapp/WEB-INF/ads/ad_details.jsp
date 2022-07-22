@@ -9,7 +9,7 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <div class="container">
-    <h2>Full ads with details of cars:</h2>
+    <h2>Full ads with details:</h2>
 
     <c:forEach var="ads" items="${ads}">
         <div class="col-md-6">
