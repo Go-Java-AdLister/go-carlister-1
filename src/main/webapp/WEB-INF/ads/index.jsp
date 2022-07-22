@@ -15,7 +15,7 @@
         <div class="col-md-6">
             <h3>${ads.title}</h3>
             <p>${ads.description}</p>
-            <a href="/WEB-INF/ads/details.jsp">Link to Full Ad</a>
+            <a> href="<c:url value="/details"><c:param name="id" value="${ad.id}"/><"Link to Full Ad"></c:url>"</a>
 
         </div>
     </c:forEach>
