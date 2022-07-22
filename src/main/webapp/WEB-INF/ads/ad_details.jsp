@@ -9,12 +9,17 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <div class="container">
-    <h2>Here is a list of all the Cars!</h2>
+    <h2>Full ads with details:</h2>
 
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
-            <h3>${ads.title}</h3>
-            <a> href="<c:url value="/ads/details"><c:param name="id" value="${ad.id}"/><"Link to Full Ad"></c:url>"</a>
+            <h3>${ad.title}</h3>
+            <p>${ad.year}</p>
+            <p>${ad.make}</p>
+            <p>${ad.model}</p>
+            <p>${ad.color}</p>
+            <p>${ad.description}</p>
+
 
         </div>
     </c:forEach>
