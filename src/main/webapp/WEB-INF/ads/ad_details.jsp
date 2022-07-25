@@ -17,6 +17,8 @@
         <p><c:out value="${the_ad.color}"/></p>
         <p><c:out value="${the_ad.description}"/></p>
     </div>
+
+
 </div>
 </body>
 </html>
