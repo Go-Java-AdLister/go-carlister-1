@@ -9,9 +9,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebServlet(name = "controllers.CreateAdServlet", urlPatterns = "/ads/create")
+@WebServlet("/ads/create")
 public class CreateAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (request.getSession().getAttribute("user") == null) {
@@ -23,18 +24,24 @@ public class CreateAdServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        User user = (User) request.getSession().getAttribute("user");
-        Ad ad = new Ad(
-            user.getId(),
-                request.getParameter("title"),
-                request.getParameter("description"),
-                request.getParameter("year"),
-                request.getParameter("make"),
-                request.getParameter("color"),
-                request.getParameter("model")
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
+//        User user = (User) request.getSession().getAttribute("user");
+//        System.out.println("User Id via user.getId(): " + user.getId());
+        if (user != null) {
+            Ad ad = new Ad(
+                    user.getId(),
+                    request.getParameter("title"),
+                    request.getParameter("description"),
+                    request.getParameter("year"),
+                    request.getParameter("make"),
+                    request.getParameter("color"),
+                    request.getParameter("model")
 
-        );
-        DaoFactory.getAdsDao().insert(ad);
-        response.sendRedirect("/ads");
+            );
+            System.out.println("User Id via ad.getUserId(): " + ad.getUserId());
+            DaoFactory.getAdsDao().insert(ad);
+            response.sendRedirect("/ads");
+        }
     }
 }

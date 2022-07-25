@@ -23,8 +23,8 @@ public class Ad {
         this.model = model;
     }
 
-    public Ad(long id, String title, String description, String year, String make, String color, String model) {
-        this.id = id;
+    public Ad(long userId, String title, String description, String year, String make, String color, String model) {
+        this.userId = userId;
         this.title = title;
         this.description = description;
         this.year = year;
