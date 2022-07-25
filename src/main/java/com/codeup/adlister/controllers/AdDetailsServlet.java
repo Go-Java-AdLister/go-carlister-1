@@ -8,7 +8,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet("/ad/details")
+@WebServlet("/ads/details")
 public class AdDetailsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -19,7 +19,7 @@ public class AdDetailsServlet extends HttpServlet {
         long id = Long.parseLong(request.getParameter("id"));
         Ad ad = DaoFactory.getAdsDao().getAdById(id);
         request.setAttribute("ads", ad);
-        request.getRequestDispatcher("/WEB-INF/details.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/ad_details.jsp").forward(request, response);
     }
 
     @Override

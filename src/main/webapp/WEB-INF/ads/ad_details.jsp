@@ -11,7 +11,7 @@
 <div class="container">
     <h2>Full ads with details:</h2>
 
-    <c:forEach var="ad" items="${ads}">
+    <c:forEach var="ad" items="${ad}">
         <div class="col-md-6">
             <h3>${ad.title}</h3>
             <p>${ad.year}</p>
