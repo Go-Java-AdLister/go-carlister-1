@@ -11,4 +11,7 @@ public interface Ads {
 
     Ad getAdById(long id);
     Long insert(Ad ad);
+
+    void editAd(String title, String year, String make, String model, String color, String description);
+
 }

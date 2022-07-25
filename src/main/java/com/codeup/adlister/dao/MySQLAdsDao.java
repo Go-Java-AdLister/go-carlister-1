@@ -60,6 +60,11 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+    @Override
+    public void editAd(String title, String year, String make, String model, String color, String description) {
+
+    }
+
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
             rs.getLong("id"),
