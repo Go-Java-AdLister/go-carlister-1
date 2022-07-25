@@ -9,20 +9,14 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <div class="container">
-    <h2>Full ads with details:</h2>
-
-    <c:forEach var="ad" items="${ad}">
-        <div class="col-md-6">
-            <h3>${ad.title}</h3>
-            <p>${ad.year}</p>
-            <p>${ad.make}</p>
-            <p>${ad.model}</p>
-            <p>${ad.color}</p>
-            <p>${ad.description}</p>
-
-
-        </div>
-    </c:forEach>
+    <div class="col-md-6">
+    <h2><c:out value="${the_ad.title}"/></h2>
+        <p><c:out value="${the_ad.year}"/></p>
+        <p><c:out value="${the_ad.make}"/></p>
+        <p><c:out value="${the_ad.model}"/></p>
+        <p><c:out value="${the_ad.color}"/></p>
+        <p><c:out value="${the_ad.description}"/></p>
+    </div>
 </div>
 </body>
 </html>
