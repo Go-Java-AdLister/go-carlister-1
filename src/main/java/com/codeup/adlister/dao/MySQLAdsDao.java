@@ -66,10 +66,10 @@ public class MySQLAdsDao implements Ads {
             rs.getLong("user_id"),
             rs.getString("title"),
             rs.getString("description"),
-                rs.getString("year"),
-                rs.getString("make"),
-                rs.getString("color"),
-                rs.getString("model")
+            rs.getString("year"),
+            rs.getString("make"),
+            rs.getString("color"),
+            rs.getString("model")
 
         );
     }
@@ -80,5 +80,26 @@ public class MySQLAdsDao implements Ads {
             ads.add(extractAd(rs));
         }
         return ads;
+    }
+
+    @Override
+    public Ad getAdById(long id){
+        Ad ad = null;
+        try {
+            Statement stmt = connection.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM ads WHERE id='" + id + "'");
+            ad = new Ad(rs.getLong("id"),
+                    rs.getLong("user_id"),
+                    rs.getString("title"),
+                    rs.getString("description"),
+                    rs.getString("year"),
+                    rs.getString("make"),
+                    rs.getString("color"),
+                    rs.getString("model")
+            );
+        } catch (SQLException sqle){
+            throw new RuntimeException("Error connecting to the db", sqle);
+        }
+        return ad;
     }
 }

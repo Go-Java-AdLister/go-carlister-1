@@ -10,8 +10,7 @@ public class Ad {
     private String color;
     private String model;
 
-    public Ad() {
-    }
+    public Ad() {}
 
     public Ad(long id, long userId, String title, String description, String year, String make, String color, String model) {
         this.id = id;
@@ -24,67 +23,45 @@ public class Ad {
         this.model = model;
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
+    public Ad(long id, String title, String description, String year, String make, String color, String model) {
         this.id = id;
-    }
-
-    public long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(long userId) {
-        this.userId = userId;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
         this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getYear() {
-        return year;
-    }
-
-    public void setYear(String year) {
         this.year = year;
-    }
-
-    public String getMake() {
-        return make;
-    }
-
-    public void setMake(String make) {
         this.make = make;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
         this.color = color;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
         this.model = model;
     }
+
+    public long getId() { return id; }
+
+    public void setId(long id) { this.id = id; }
+
+    public long getUserId() { return userId; }
+
+    public void setUserId(long userId) { this.userId = userId; }
+
+    public String getTitle() { return title; }
+
+    public void setTitle(String title) { this.title = title; }
+
+    public String getDescription() { return description; }
+
+    public void setDescription(String description) { this.description = description; }
+
+    public String getYear() { return year; }
+
+    public void setYear(String year) { this.year = year; }
+
+    public String getMake() { return make; }
+
+    public void setMake(String make) { this.make = make; }
+
+    public String getColor() { return color; }
+
+    public void setColor(String color) { this.color = color; }
+
+    public String getModel() { return model; }
+
+    public void setModel(String model) { this.model = model; }
 }
