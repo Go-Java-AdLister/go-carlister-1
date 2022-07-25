@@ -18,7 +18,8 @@ public class AdDetailsServlet extends HttpServlet {
         }
         long id = Long.parseLong(request.getParameter("id"));
         Ad ad = DaoFactory.getAdsDao().getAdById(id);
-        request.setAttribute("ads", ad);
+
+        request.setAttribute("ad", ad);
         request.getRequestDispatcher("/WEB-INF/ads/ad_details.jsp").forward(request, response);
     }
 

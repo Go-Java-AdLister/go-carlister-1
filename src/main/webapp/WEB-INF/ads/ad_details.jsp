@@ -12,12 +12,12 @@
     <h2>Full ads with details:</h2>
 
         <div class="col-md-6">
-            <h3><c:out value="${ad.title}"></c:out></h3>
-            <p><c:out value="${ad.year}"></c:out></p>
-            <p><c:out value="${ad.make}"></c:out></p>
-            <p><c:out value="${ad.model}"></c:out></p>
-            <p><c:out value="${ad.color}"></c:out></p>
-            <p><c:out value="${ad.description}"></c:out></p>
+            <h3><c:out value="${ad.title}"/></h3>
+            <p><c:out value="${ad.year}"/></p>
+            <p><c:out value="${ad.make}"/></p>
+            <p><c:out value="${ad.model}"/></p>
+            <p><c:out value="${ad.color}"/></p>
+            <p><c:out value="${ad.description}"/></p>
 
         </div>
 </div>
