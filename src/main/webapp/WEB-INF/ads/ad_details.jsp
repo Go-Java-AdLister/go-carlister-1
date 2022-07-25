@@ -11,18 +11,15 @@
 <div class="container">
     <h2>Full ads with details:</h2>
 
-    <c:forEach var="ad" items="${ad}">
         <div class="col-md-6">
-            <h3>${ad.title}</h3>
-            <p>${ad.year}</p>
-            <p>${ad.make}</p>
-            <p>${ad.model}</p>
-            <p>${ad.color}</p>
-            <p>${ad.description}</p>
-
+            <h3><c:out value="${ad.title}"></c:out></h3>
+            <p><c:out value="${ad.year}"></c:out></p>
+            <p><c:out value="${ad.make}"></c:out></p>
+            <p><c:out value="${ad.model}"></c:out></p>
+            <p><c:out value="${ad.color}"></c:out></p>
+            <p><c:out value="${ad.description}"></c:out></p>
 
         </div>
-    </c:forEach>
 </div>
 </body>
 </html>
