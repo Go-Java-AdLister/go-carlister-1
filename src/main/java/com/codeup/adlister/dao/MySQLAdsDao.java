@@ -84,10 +84,12 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public Ad getAdById(long id){
+        System.out.println("GetAdById SOUT" + id);
         Ad ad = null;
         try {
             Statement stmt = connection.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM ads WHERE id='" + id + "'");
+            rs.next();
             ad = new Ad(rs.getLong("id"),
                     rs.getLong("user_id"),
                     rs.getString("title"),
@@ -98,7 +100,7 @@ public class MySQLAdsDao implements Ads {
                     rs.getString("model")
             );
         } catch (SQLException sqle){
-            throw new RuntimeException("Error connecting to the db", sqle);
+            throw new RuntimeException("Error connecting to the db getAdById", sqle);
         }
         return ad;
     }
